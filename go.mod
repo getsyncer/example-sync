@@ -3,7 +3,7 @@ module github.com/getsyncer/example-sync
 go 1.21.3
 
 require (
-	github.com/getsyncer/public-sync-modules v1.29.4
+	github.com/getsyncer/public-sync-modules v1.29.6
 	github.com/getsyncer/syncer-core v1.15.5
 )
 
@@ -16,7 +16,7 @@ require (
 	github.com/ProtonMail/go-crypto v0.0.0-20230923063757-afb1ddc0824c // indirect
 	github.com/acomagu/bufpipe v1.0.4 // indirect
 	github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883 // indirect
-	github.com/cloudflare/circl v1.3.3 // indirect
+	github.com/cloudflare/circl v1.3.5 // indirect
 	github.com/cresta/zapctx v0.0.3 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.4 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
@@ -37,7 +37,7 @@ require (
 	github.com/skeema/knownhosts v1.2.1 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
-	go.uber.org/dig v1.17.0 // indirect
+	go.uber.org/dig v1.17.1 // indirect
 	go.uber.org/fx v1.20.1 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.26.0 // indirect
