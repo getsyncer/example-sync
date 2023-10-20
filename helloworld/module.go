@@ -21,7 +21,7 @@ type Config struct {
 	ExtraContent string
 }
 
-func (c Config) Changes(ctx context.Context) (files.System[*files.StateWithChangeReason], error) {
+func (c Config) Changes(_ context.Context) (files.System[*files.StateWithChangeReason], error) {
 	var ret files.System[*files.StateWithChangeReason]
 	if err := ret.Add("hello.txt", &files.StateWithChangeReason{
 		ChangeReason: &files.ChangeReason{
