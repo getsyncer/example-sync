@@ -1,4 +1,4 @@
-module github.com/cresta/example-sync
+module github.com/getsyncer/example-sync
 
 go 1.21.3
 
