@@ -1,0 +1,7 @@
+version: 1
+config:
+  name: "example-sync"
+
+children:
+  - source: github.com/getsyncer/public-sync-modules/opensourcegolib
+
