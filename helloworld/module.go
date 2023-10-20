@@ -18,6 +18,7 @@ func init() {
 const Name = config.Name("helloworld")
 
 type Config struct {
+	ExtraContent string
 }
 
 func (c Config) Changes(ctx context.Context) (files.System[*files.StateWithChangeReason], error) {
@@ -28,7 +29,7 @@ func (c Config) Changes(ctx context.Context) (files.System[*files.StateWithChang
 		},
 		State: files.State{
 			Mode:          0644,
-			Contents:      []byte(fmt.Sprintf("This file is synced by syncer-core!\n%s", drift.MagicTrackedString)),
+			Contents:      []byte(fmt.Sprintf("%s\nThis file is synced by syncer-core!\n%s", drift.MagicTrackedString, c.ExtraContent)),
 			FileExistence: files.FileExistencePresent,
 		},
 	}); err != nil {
