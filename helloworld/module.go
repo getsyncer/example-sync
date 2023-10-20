@@ -18,15 +18,12 @@ func init() {
 const Name = config.Name("helloworld")
 
 type Config struct {
-	ExtraContent string
+	ExtraContent string `yaml:"extra_content"`
 }
 
 func (c Config) Changes(_ context.Context) (files.System[*files.StateWithChangeReason], error) {
 	var ret files.System[*files.StateWithChangeReason]
 	if err := ret.Add("hello.txt", &files.StateWithChangeReason{
-		ChangeReason: &files.ChangeReason{
-			Reason: "sync-output.txt",
-		},
 		State: files.State{
 			Mode:          0644,
 			Contents:      []byte(fmt.Sprintf("%s\nThis file is synced by syncer-core!\n%s", drift.MagicTrackedString, c.ExtraContent)),
