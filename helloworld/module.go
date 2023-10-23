@@ -26,7 +26,7 @@ func (c Config) Changes(_ context.Context) (files.System[*files.StateWithChangeR
 	if err := ret.Add("hello.txt", &files.StateWithChangeReason{
 		State: files.State{
 			Mode:          0644,
-			Contents:      []byte(fmt.Sprintf("%s\nThis file is synced by syncer-core (change)!\n%s", drift.MagicTrackedString, c.ExtraContent)),
+			Contents:      []byte(fmt.Sprintf("%s\nThis file is synced by syncer-core (2)!\n%s", drift.MagicTrackedString, c.ExtraContent)),
 			FileExistence: files.FileExistencePresent,
 		},
 	}); err != nil {
