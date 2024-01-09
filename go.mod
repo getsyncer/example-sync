@@ -1,6 +1,6 @@
 module github.com/getsyncer/example-sync
 
-go 1.21.5
+go 1.21.6
 
 require (
 	github.com/getsyncer/public-sync-modules v1.32.1
